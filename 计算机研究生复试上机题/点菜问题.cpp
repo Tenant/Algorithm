@@ -1,3 +1,9 @@
+/*
+计算机研究生复试上机题，北京大学
+Retrieved from 
+Solved by Gao Shuqi, on 2018-03-16
+*/
+
 #include <iostream>
 using namespace std;
 
