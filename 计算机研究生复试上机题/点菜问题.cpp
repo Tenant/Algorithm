@@ -1,7 +1,7 @@
 /*
 计算机研究生复试上机题，北京大学
-Retrieved from 
-Solved by Gao Shuqi, on 2018-03-16
+Retrieved from https://www.nowcoder.com/practice/b44f5be34a9143aa84c478d79401e22a?tpId=40&tqId=21397&tPage=4&rp=4&ru=/ta/kaoyan&qru=/ta/kaoyan/question-ranking
+Solved by Gao Shuqi, on 2018-03-16.
 */
 
 #include <iostream>
