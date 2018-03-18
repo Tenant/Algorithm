@@ -49,5 +49,7 @@ int main() {
 
 	fclose(stdin);
 	fclose(stdout);
+	//getchar();
+	//getchar();
 	return 0;
 }
