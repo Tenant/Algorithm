@@ -1,7 +1,7 @@
 /*
 Google Code Jam 2017, Qualification Round, Problem B. Tidy Numbers
 Retrieved from https://code.google.com/codejam/contest/3264486/dashboard#s=p1
-Correct, By Gao Shuqi, on 2018-03-18.
+Finished, By Gao Shuqi, on 2018-03-18.
 */
 
 #include <iostream>
