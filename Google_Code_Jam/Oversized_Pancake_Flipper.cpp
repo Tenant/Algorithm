@@ -1,7 +1,7 @@
 /*
 Google Code Jam , Qualification Round 2017, Problem A. Oversized Pancake Flipper
 Retrieved from https://code.google.com/codejam/contest/3264486/dashboard
-Correct, By Gao Shuqi, on 2018-03-18.
+Finished, By Gao Shuqi, on 2018-03-18.
 */
 #include <iostream>
 #include <string.h>
