@@ -1,5 +1,5 @@
 /*
-Google Code Jam 2015, Qualification Round, Problem B. Infinite House of Pancakes
+Google Code Jam, Qualification Round 2015, Problem B. Infinite House of Pancakes
 Retrieved from https://code.google.com/codejam/contest/6224486/dashboard#s=p1
 Finished, By Gao Shuqi, on 2018-03-24.
 */
