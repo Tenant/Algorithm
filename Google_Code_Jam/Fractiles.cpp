@@ -36,12 +36,12 @@ int main() {
 				continue;
 			}
 			printf("Case #%d:", ii);
-			long long pos = 1;
-			for (int i = 1; i <= C; i++) pos = pos + (i - 1)*pow(K, C - i);
-			for (int i = 0; i <(K+C)/C; i++) {
-				long long tmp = pos+i*pow(K, C-1)+i;
-				if (tmp>pow(K, C)) tmp = pow(K, C);
-				printf(" %lld", tmp);
+			long long bnd = pow(K, C);
+			for (int i = 1; i <= K; i+=C) {
+				long long pos = i;
+				for (int j = i+1; j <i+ C; j++) pos = (pos - 1)*K + j;
+				if (pos>bnd) pos = bnd;
+				printf(" %lld", pos);
 			}
 			printf("\n");
 		}
