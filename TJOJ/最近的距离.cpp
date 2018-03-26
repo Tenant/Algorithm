@@ -1,7 +1,7 @@
 /*
-Tongji Open Judge, ÍøÂçÈü 2017, Problem B. ×î½üµÄ¾àÀë
+Tongji Open Judge, ÃÃ¸Ã‚Ã§ÃˆÃ¼ 2017, Problem B. Ã—Ã®Â½Ã¼ÂµÃ„Â¾Ã Ã€Ã«
 Retrieved from http://acm.tongji.edu.cn/contest.php?cid=1002
-Finished, By Gao Shuqi, on 2018-03-25.
+Finished, By Gao Shuqi, on 2018-03-26.
 */
 
 #include <iostream>
