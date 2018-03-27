@@ -1,5 +1,5 @@
 /*
-Tongji Open Judge, ÍøÂçÈü 2017, Problem B. ×î½üµÄ¾àÀë
+Tongji Open Judge, 网络赛 2017, Problem B. 最近的距离
 Retrieved from http://acm.tongji.edu.cn/contest.php?cid=1002
 Finished, By Gao Shuqi, on 2018-03-26.
 */
