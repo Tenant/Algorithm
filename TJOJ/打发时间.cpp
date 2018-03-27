@@ -1,5 +1,5 @@
-/*
-Tongji Open Judge, Onsite 2017, Problem B. ´ò·¢Ê±¼ä
+ï»¿/*
+Tongji Open Judge, Onsite 2017, Problem B. æ‰“å‘æ—¶é—´
 Retrieved from http://acm.tongji.edu.cn/problem.php?cid=1003&pid=1
 Finished, By Gao Shuqi, on 2018-03-27.
 */
