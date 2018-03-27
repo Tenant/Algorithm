@@ -1,5 +1,5 @@
-/*
-Tongji Open Judge, ÍøÂçÈü 2017, Problem F. Î£ÏÕµÄÆåÅÌ
+ï»¿/*
+Tongji Open Judge, ç½‘ç»œèµ› 2017, Problem F. å±é™©çš„æ£‹ç›˜
 Retrieved from http://acm.tongji.edu.cn/problem.php?cid=1001&pid=5
 Finished, By Gao Shuqi, on 2018-03-26.
 */
