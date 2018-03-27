@@ -1,5 +1,5 @@
 /*
-Tongji Open Judge, ÍøÂçÈü 2017, Problem E. 冠军组合
+Tongji Open Judge, 网络赛 2017, Problem E. 冠军组合
 Retrieved from http://acm.tongji.edu.cn/problem.php?cid=1001&pid=4
 Finished, By Gao Shuqi, on 2018-03-26.
 */
