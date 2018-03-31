@@ -6,19 +6,10 @@ Finished, By Gao Shuqi, on 2018-03-31.
 
 #include <iostream>
 #include<string>
-#include<string.h>
 using namespace std;
 
 int A, B, N, bottom, top, mid;
-
-int getResponse() {
-	string str, correct = "CORRECT", smaller = "TOO_SMALL", bigger = "TOO_BIG", wrong = "WRONG_ANSWER";
-	cin >> str;
-	if (str == correct) return 0;
-	else if (str == smaller) return -1;
-	else if (str == bigger) return 1;
-	else return -2;
-}
+string str, correct = "CORRECT", smaller = "TOO_SMALL", bigger = "TOO_BIG", wrong = "WRONG_ANSWER";
 
 int main() {
 	int T;
@@ -31,10 +22,16 @@ int main() {
 		top = B;
 		int tmp=0;
 		while (++k <= N) {
-			if (bottom >= top) cout<<bottom<<endl;
 			mid = (top + bottom) / 2;
-			cout << mid << endl;
-			tmp = getResponse();
+			if (bottom == top) cout<<bottom<<endl;
+			else{
+				cout << mid << endl;
+			}
+			cin>>str;
+			if (str == correct) tmp=0;
+			else if (str == smaller) tmp= -1;
+			else if (str == bigger) tmp=1;
+			else tmp= -2;
 			if (tmp == 0) break;
 			if (tmp == 1) { top = mid - 1; continue; }
 			if (tmp == -1) { bottom = mid + 1; continue; } 
