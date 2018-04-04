@@ -1,4 +1,6 @@
 ﻿/*
+Variance of the Single-Source Shortest Paths Problem.
+Complted, By Gao Shuqi, on 2018-04-03.
 */
 #include <stdio.h>
 #include <string.h>
