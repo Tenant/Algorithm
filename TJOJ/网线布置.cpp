@@ -7,7 +7,7 @@ Finished, By Gao Shuqi, on 2018-03-26.
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
-#include <algorithm>
+#include <string.h>
 using namespace std;
 int N;
 struct E{
@@ -40,8 +40,9 @@ int main() {
 		for (int k = 1; k <= N - 1; k++) {
 			for (int i = 0; i < N; i++) {
 				if (visited[i]) continue;
-				if (dist[i] == -1) dist[i] = getDistance(dot[0], dot[i]);
-				if (dist[i] != -1 && dist[i]>dist[frontier] + getDistance(dot[frontier], dot[i])) dist[i] = dist[frontier] + getDistance(dot[frontier], dot[i]);
+				int dd = getDistance(dot[frontier], dot[i]);
+				if (dist[i] == -1) dist[i] = dd;
+				if (dist[i] != -1 && dist[i]>dist[frontier] + dd) dist[i] = dist[frontier] + dd;
 			}
 			int tmp = 0x7fffffff, pos;
 			for (int i = 0; i < N; i++) {
