@@ -1,6 +1,6 @@
 /*
 Tongji Open Judge, Onsite 2017, Problem A. 网线布置
-Retrieved from http://acm.tongji.edu.cn/contest.php?cid=1003
+Retrieved from http://acm.tongji.edu.cn/problem.php?id=1090
 Finished, By Gao Shuqi, on 2018-03-26.
 */
 
