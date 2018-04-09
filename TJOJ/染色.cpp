@@ -1,3 +1,9 @@
+﻿/*
+Tongji OJ, Problem 1001. 染色
+Retrieved from http://acm.tongji.edu.cn/problem.php?id=1001
+回溯法
+Completed, By Gao Shuqi, on 2018-04-09
+*/
 #include <iostream>
 #include <vector>
 #include <string.h>
@@ -9,28 +15,24 @@ struct Dot{
 };
 
 vector<Dot> dot[N_MAX + 1];
-int color[N_MAX + 1],depth, cnt, ans;
-int n, m;
-bool visited[N_MAX + 1];
+int color[N_MAX + 1],cnt;
+int n, m; /* n: the number of vertices, m: the number of edges */
 
-void cal(int d) {
-	for (int i = 1; i <= 4; i++) {
-		bool accessible = true;
-		for (int j = 0; j <= dot[d].size(); j++) {
-			if (color[dot[d][j].end] == i) { accessible = false; break; }
+void paint(int depth) {
+	int p;
+	for (p = 1; p <= n && color[p]!=0; p++);
+	if (p > n) return; /* could never run */
+	for (int c = 1; c <= 4; c++) {
+		bool avaible = true;
+		for (int i = 0; i < dot[p].size(); i++) {
+			if (color[dot[p][i].end] == c) { avaible = false; break; }
 		}
-		if (!accessible) continue;
-		color[d] = i;
-		depth++;
-		if (depth == n) { cnt++; continue; }
-		for (int j = 0; j <= dot[d].size(); j++) {
-			if (color[dot[d][j].end] != 0) continue;
-			visited[dot[d][j].end] = true;
-			cal(dot[d][j].end);
-
-		}
+		if (!avaible) continue;
+		color[p] = c;
+		if (depth == n) { cnt++; color[p] = 0; continue; }
+		paint(depth + 1);
+		color[p] = 0;
 	}
-	depth--;
 }
 
 int main() {
@@ -44,15 +46,9 @@ int main() {
 		tmp.end = b;
 		dot[a].push_back(tmp);
 	}
-	ans = 1;
-	for (int i = 1; i <= n; i++) {
-		if (visited[i]) continue;
-		visited[i] = true;
-		cnt = 0;
-		depth = 0;
-		cal(i);
-		ans *= cnt;
-	}
-	printf("%d\n", ans);
+	cnt = 0;
+	paint(1);
+	printf("%d", cnt);
+
 	return 0;
 }
