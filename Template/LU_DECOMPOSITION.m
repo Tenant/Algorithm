@@ -1,4 +1,5 @@
 function [L, U]=LU_DECOMPOSITION(A)
+    % function [L, U]=LU_DECOMPOSITION(A)
     % 模拟高斯消元法求对称正定矩阵A的LU分解，可以证明对称正定矩阵分解过程中不会产生除零错误
     % 该方法同样可用于迭代过程中不会产生除零错误的非奇异矩阵的LUP分解，其中P为单位阵
     % 算法总体时间复杂度为n^3
