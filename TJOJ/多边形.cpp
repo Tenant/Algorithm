@@ -1,4 +1,10 @@
-﻿#include <iostream>
+﻿/*
+Tongji OJ, Problem 1004. 多边形
+Retrieved from http://acm.tongji.edu.cn/problem.php?id=1004
+计算几何
+Completed, By Gao Shuqi, on 2018-04-10
+*/
+#include <iostream>
 #include <algorithm>
 #include <math.h>
 #define N_MAX 1000
@@ -58,6 +64,7 @@ int main() {
 			if (convex) polygon[V - 1] = i;
 			else polygon[V++] = i;
 		}
+
 		//处理顶点共线退化问题
 		int poc = 2;
 		for (; poc < N; poc++) {
@@ -83,12 +90,23 @@ int main() {
 				double tmp = (dot[i].x - dot[0].x)*(dot[i].x - dot[0].x) + (dot[i].y - dot[0].y)*(dot[i].y - dot[0].y);
 				dot[i].r = tmp;
 			}
-			sort(dot + 1, dot + poc + 1, cmp4);
+			sort(dot + poc, dot + N, cmp4);
 		}
-		for (int i = 0; i < N; i++) {
-			printf("%d %d %.6f\n", dot[i].x, dot[i].y, dot[i].angle);
+		
+		bool danger = true, stable = true;;
+		for (int i = 0; i < N-1; i++) {
+			double tmp = signed_triangle_area(dot[i], dot[i+1], dot[(i+2)%N]);
+			if (tmp>EPSILON || tmp < -EPSILON) {
+				if (danger) { stable = false; break; }
+				else{ danger = true; continue; }
+			}
+			else {
+				danger = false;
+				continue;
+			}
 		}
-
+		if (stable) printf("YES\n");
+		else printf("NO\n");
 	}
 	return 0;
 }
