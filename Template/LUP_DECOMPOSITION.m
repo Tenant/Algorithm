@@ -1,4 +1,5 @@
 function [L, U, P]=LUP_DECOMPOSITION(A)
+    % function [L, U, P]=LUP_DECOMPOSITION(A)
     % 求矩阵L, U,P满足PA=LU, 其中 
     % A为非奇异矩阵，P为置换矩阵，L为单位下三角矩阵，U为上三角矩阵
     % 算法总体时间复杂度为n^3
