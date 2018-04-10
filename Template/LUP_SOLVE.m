@@ -1,4 +1,5 @@
 function x=LUP_SOLVE(L, U, P, b)
+    % function x=LUP_SOLVE(L, U, P, b)
     % 通过LUP分解求解线性方程组Ax=b, 其中A为非奇异矩阵
     % 算法总体时间复杂度为n^2，具有数值稳定性
     % PA=LU, A=P^-1 *(LU)
