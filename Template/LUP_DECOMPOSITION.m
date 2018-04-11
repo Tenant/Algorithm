@@ -14,6 +14,7 @@ function [L, U, P]=LUP_DECOMPOSITION(A)
     
     for k=1:N
         p=0;
+        k_=k;
         for ii=k:N
             if(abs(A(ii, k))>p)
                 p=abs(A(ii,k));
