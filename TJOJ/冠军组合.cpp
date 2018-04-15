@@ -1,7 +1,8 @@
 /*
-Tongji Open Judge, 网络赛 2017, Problem E. 冠军组合
-Retrieved from http://acm.tongji.edu.cn/problem.php?cid=1001&pid=4
-Finished, By Gao Shuqi, on 2018-03-26.
+Tongji OJ, Problem 1087. 冠军组合
+Retrieved from http://acm.tongji.edu.cn/problem.php?id=1087
+枚举法
+Completed, By Gao Shuqi, on 2018-03-26.
 */
 
 #include <iostream>
@@ -26,8 +27,6 @@ int main() {
 		}
 	}
 	cnt /= 3;
-	printf("%d\n", cnt);
-	//getchar();
-	//getchar();
+	printf("%d", cnt);
 	return 0;
 }
