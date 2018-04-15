@@ -1,7 +1,7 @@
 ﻿/*
 Tongji OJ, Problem 1085. 硬币翻转
 Retrieved from http://acm.tongji.edu.cn/problem.php?id=1085
-归纳法
+归纳法.
 Completed, By Gao Shuqi, on 2018-03-26.
 */
 
