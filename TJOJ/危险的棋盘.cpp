@@ -1,7 +1,7 @@
 ﻿/*
-Tongji Open Judge, 网络赛 2017, Problem F. 危险的棋盘
-Retrieved from http://acm.tongji.edu.cn/problem.php?cid=1001&pid=5
-Finished, By Gao Shuqi, on 2018-03-26.
+Tongji OJ, Problem 1086. 危险的棋盘
+Retrieved from http://acm.tongji.edu.cn/problem.php?id=1086
+By Gao Shuqi, on 2018-04-10
 */
 
 #include <iostream>
@@ -86,8 +86,7 @@ int main() {
 		}
 	}
 	if (cnt == 0x7fffffff) cnt = -1;
-	printf("%d\n", cnt);
-	getchar();
-	getchar();
+	printf("%d", cnt);
+
 	return 0;
 }
