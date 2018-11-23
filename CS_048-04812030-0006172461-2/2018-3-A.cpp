@@ -35,17 +35,26 @@ double closest_pair(Point2d* data, int length){
 	else if (sigma2 == -1) sigma = sigma1;
 	else sigma = (sigma1>sigma2) ? sigma2 : sigma1;
 	double L = (data[length / 2 - 1].x + data[length / 2].x) / 2.;
-	for (int idx = 0; idx< length; idx++){
-		if (abs(data[idx].x - L) > sigma) continue;
-		int head = (idx - 5)>0 ? (idx - 5) : 0;
-		int tail = (idx + 5)<length ? (idx + 5) : (length - 1);
-		sort(data + head, data + tail + 1, compare_Y);
-		for (int p = head; p <= tail; p++){
-			if (p == idx) continue;
+	Point2d localpoints[N_MAX];
+	int locallength=0;
+	for (int idx = 0, locallength = 0; idx<length;idx++)
+	if (abs(points[idx].x - L) <= L)
+		localpoints[locallength++] = points[idx];
+	sort(localpoints, localpoints + locallength, compare_Y);
+	int x;
+	for (int idx = 0; idx<locallength; idx++){
+		if (localpoints[idx].x <= L) continue;
+		x = 0;
+		for (int p = idx + 1; p <= idx + 6 + x && p<locallength; p++){
+			if (localpoints[p].x < L){
+				x++;
+				continue;
+			}
 			double temp_dist = sqrt((data[p].x - data[idx].x)*(data[p].x - data[idx].x) + (data[p].y - data[idx].y) * (data[p].y - data[idx].y));
-			if (temp_dist < sigma) sigma = temp_dist;
+			if (temp_dist<sigma){
+				sigma = temp_dist;
+			}
 		}
-
 	}
 	return sigma;
 
