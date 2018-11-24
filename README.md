@@ -6,4 +6,4 @@
 **Source**: 
 **Type**: 动态规划，股票交易问题
 
-https://github.com/Tenant/Algorithm-Repo/blob/master/Tutorial.md
+[Tutorial](https://github.com/Tenant/Algorithm-Repo/blob/master/Tutorial.md)
