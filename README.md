@@ -99,3 +99,15 @@ if (length == 1) return 1e11;
 **Type**: 动态规划，递归，棋盘分割问题
 
 **Code**: https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-3-F.cpp
+
+
+## Google_Code_Jam
+
+
+## TJOJ
+
+
+## UVa
+
+
+## LeetCode
