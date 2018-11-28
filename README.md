@@ -49,6 +49,39 @@ void catchCows_dp(int person, int cow){
 }
 ```
 
+
+### 2018-3-A 平面最近點對
+**Source**: http://algorithm.openjudge.cn/2018test3/A/
+
+**Type**: 歸并
+
+**Code**:
+
+輸入數據中點的坐標均爲整型，但計算點對距離時需要顯示的將坐標轉換為double型：
+
+```c++
+double getDistance(Point2d a, Point2d b){
+	return sqrt(((double)a.x - (double)b.x)*((double)a.x - (double)b.x)
+		      + ((double)a.y - (double)b.y)*((double)a.y - (double)b.y));
+}
+```
+
+原地歸并排序的庫函數:
+
+```c++
+inplace_merge(data, data + length / 2, data + length, compare_Y);
+```
+
+程序中預先申明的數組空間小於測試數據大小時，會產生`Exeed Time Limit`的錯誤
+
+定義函數用於`sort`時，不能是小於等於或大於等於：
+
+```c++
+bool compare_X(Point2d a, Point2d b){
+	return a.x < b.x;
+}
+```
+
 ### 2018-3-E 股票交易
 **Source**: 
 
