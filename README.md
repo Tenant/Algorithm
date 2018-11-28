@@ -25,7 +25,7 @@
 **Code**:
 
 动态规划
-```
+```c++
 void catchCows_dp(int person, int cow){
 	memset(visited, 0, sizeof(visited));
 	memset(cost, -1, sizeof(cost));
