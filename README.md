@@ -55,7 +55,7 @@ void catchCows_dp(int person, int cow){
 
 **Type**: 歸并
 
-**Code**:
+**Code**: https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-3-A.cpp
 
 輸入數據中點的坐標均爲整型，但計算點對距離時需要顯示的將坐標轉換為double型：
 
