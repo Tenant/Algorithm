@@ -72,7 +72,7 @@ double getDistance(Point2d a, Point2d b){
 inplace_merge(data, data + length / 2, data + length, compare_Y);
 ```
 
-程序中預先申明的數組空間小於測試數據大小時，會產生`Exeed Time Limit`的錯誤
+程序中預先申明的數組空間小於測試數據大小時，會產生`Exceed Time Limit`的錯誤
 
 定義函數用於`sort`時，不能是小於等於或大於等於：
 
@@ -80,6 +80,11 @@ inplace_merge(data, data + length / 2, data + length, compare_Y);
 bool compare_X(Point2d a, Point2d b){
 	return a.x < b.x;
 }
+```
+
+可以通過這樣的方式設置`Infinity`：
+```c++
+if (length == 1) return 1e11;
 ```
 
 ### 2018-3-E 股票交易
