@@ -4,7 +4,7 @@
 #include <iostream>
 #include <algorithm>
 #include <cmath>
-#define N_MAX 1000
+#define N_MAX 100001
 
 using namespace std;
 
@@ -22,45 +22,33 @@ bool compare_Y(Point2d a, Point2d b){
 	return a.y < b.y;
 }
 
+double getDistance(Point2d a, Point2d b){
+	return sqrt(((double)a.x - (double)b.x)*((double)a.x - (double)b.x)
+		      + ((double)a.y - (double)b.y)*((double)a.y - (double)b.y));
+}
+
 Point2d points[N_MAX];
 
 
 double closest_pair(Point2d* data, int length){
-	if (length == 1) return -1;
-	if (length == 2) {
-		if (data[0].y>data[1].y){
-			Point2d temp_point;
-			temp_point = data[0];
-			data[0] = data[1];
-			data[1] = temp_point;
-		}
-		return sqrt((data[0].x - data[1].x)*(data[0].x - data[1].x) + (data[0].y - data[1].y)*(data[0].y - data[1].y));
-	}
+	if (length == 1) return 1e11;
+
+	double L = (data[length / 2 - 1].x + data[length/2].x)/2.0;
 	double sigma1 = closest_pair(data, length / 2);
 	double sigma2 = closest_pair(data + length / 2, length - length / 2);
-	double sigma;
-	if (sigma1 == -1) sigma = sigma2;
-	else if (sigma2 == -1) sigma = sigma1;
-	else sigma = (sigma1>sigma2) ? sigma2 : sigma1;
-	double L = (data[length / 2 - 1].x + data[length / 2].x) / 2.;
+	double sigma=(sigma1<sigma2)?sigma1:sigma2;
+
+	inplace_merge(data, data + length / 2, data + length, compare_Y);
 	Point2d localpoints[N_MAX];
-	int local_cnt = 0;
-	int i=0, j=length/2;
-	for (; i < length / 2 && j < length;){
-		if (data[i].y <= data[j].y) localpoints[local_cnt++] = data[i++];
-		else localpoints[local_cnt++] = data[j++];
+	int cnt_local = 0;
+	for (int idx = 0; idx < length; idx++){
+		if (abs(data[idx].x - L) >= sigma) continue;
+		localpoints[cnt_local++] = data[idx];
 	}
-	if (i<length/2)
-	for (; i < length / 2;)
-		localpoints[local_cnt++] = data[i++];
-	else
-	for (; j < length;)
-		localpoints[local_cnt++] = data[j++];
-	data = localpoints;
-	for (int idx = 0; idx<length; idx++){
-		if (abs(localpoints[idx].x - L)>=sigma) continue;
-		for (int p = idx + 1; p < idx + 7 && p < length; p++){
-			double temp_dist = sqrt((data[idx].x - data[p].x)*(data[idx].x - data[p].x) + (data[idx].y - data[p].y)*(data[idx].y - data[p].y));
+	for (int idx = 0; idx < cnt_local; idx++){
+		//if (abs(data[idx].x - L) >= sigma) continue;
+		for (int p = idx + 1; p < idx + 12 && p < cnt_local; p++){
+			double temp_dist = getDistance(localpoints[idx], localpoints[p]);
 			if (temp_dist < sigma) sigma = temp_dist;
 		}
 	}
