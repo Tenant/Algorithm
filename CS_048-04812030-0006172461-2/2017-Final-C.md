@@ -46,9 +46,11 @@
 
 此题可以通过动态规划在线性时间内求解。
 
+算法中保留了两个版本，一个版本的思路是认为怪盗基德进过的建筑必须是连续的，代码如下：
+
 ```c++
 /* dp-version */
-int calulate_dp(int *data, int length){
+int calulate_dp1(int *data, int length){
 	int dp_left[N_MAX], dp_right[N_MAX];
 	dp_left[0] = 1;
 	dp_right[length - 1] = 1;
@@ -64,3 +66,33 @@ int calulate_dp(int *data, int length){
 }
 ```
 
+另一个版本认为怪盗基德经过的建筑不必要是连续的：
+
+```c++
+int calculate_dp2(int *data, int length){
+	int dp_left[N_MAX], dp_right[N_MAX];
+	dp_left[0] = 1;
+	dp_right[length - 1] = 1;
+	for (int idx = 1; idx < length; idx++){
+		dp_left[idx] = 1;
+		for (int p = 0; p < idx; p++){
+			if (data[idx]>data[p]) dp_left[idx] = max(dp_left[idx], dp_left[p] + 1);
+		}
+	}
+	for (int idx = length-2; idx >=0; idx--){
+		dp_right[idx] = 1;
+		for (int p = length-1; p > idx; p--){
+			if (data[idx]>data[p]) dp_right[idx] = max(dp_right[idx], dp_right[p] + 1);
+		}
+	}
+	int answer = 1;
+	for (int idx = 0; idx < length; idx++) answer = max(max(answer, dp_left[idx]), dp_right[idx]);
+	return answer;
+}
+```
+
+原题的考虑是基于第二种思想设计的。
+
+**总结**
+
+本题中需要正方两次求最大递减子序列，在复制从左往右遍历的代码到到从右往左遍历的部分时，漏修改了变量，导致多次**WA**.
