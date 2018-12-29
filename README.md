@@ -39,3 +39,9 @@
 | 2018-M-G         | Arctic Network                 | Prime, 最小生成树                                  | [Source](https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-M-G.md) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-M-G.cpp) | [Accepted](http://algorithm.openjudge.cn/exfinalsim/7/)   |
 | 2018-M-H         | Firing                         | 最大权闭合图, 最小割问题, 网络流                   | [Source](https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-M-H.md) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/CS_048-04812030-0006172461-2/2018-M-H.cpp) | [Accepted](http://algorithm.openjudge.cn/exfinalsim/8/)   |
 
+### Luogu
+
+| N.O.  | Title     | Type           | Source                                                       | Code                                                         | Status                                                  |
+| ----- | --------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
+| P1361 | 小M的作物 | 最小割, 网络流 | [Source](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.md) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.cpp) | [Accepted](https://www.luogu.org/problemnew/show/P1361) |
+
