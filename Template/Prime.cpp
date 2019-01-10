@@ -6,73 +6,54 @@
 #include <algorithm>
 using namespace std;
 
-const int MAX_VEC = 501;
-struct Pos
+const int N_MAX = 100;
+
+int dist[N_MAX][N_MAX];
+bool vis[N_MAX];
+int edge[N_MAX];
+int N;
+
+int Prime()
 {
-	int x, y;
-};
-
-float gra[MAX_VEC][MAX_VEC];
-Pos pos[MAX_VEC];
-float dist[MAX_VEC];
-bool vis[MAX_VEC];
-
-int N, S, P;
-
-float Prime()
-{
-	memset(vis, 0, sizeof(bool)* P);
+	memset(vis, 0, sizeof(bool)* N);
 	vis[0] = true;
-	for (int i = 0; i < P - 1; i++)
+	for (int i = 0; i < N - 1; i++)
 	{
-		float m = (float)INT_MAX;
+		int m = INT_MAX;
 		int id = 0;
-		for (int j = 0; j < P; j++)
+		for (int j = 0; j < N; j++)
 		{
-			if (!vis[j] && gra[0][j] < m)
+			if (!vis[j] && dist[0][j] < m)
 			{
-				m = gra[0][j];
+				m = dist[0][j];
 				id = j;
 			}
 		}
 		vis[id] = true;
-		dist[i] = m;
+		edge[i] = m;
 		for (int j = 0; j < id; j++)
 		{
-			if (!vis[j] && gra[0][j] > gra[j][id]) gra[0][j] = gra[j][id];
+			if (!vis[j] && dist[0][j] > dist[j][id]) dist[0][j] = dist[j][id];
 		}
-		for (int j = id + 1; j < P; j++)
+		for (int j = id + 1; j < N; j++)
 		{
-			if (!vis[j] && gra[0][j] > gra[id][j]) gra[0][j] = gra[id][j];
+			if (!vis[j] && dist[0][j] > dist[id][j]) dist[0][j] = dist[id][j];
 		}
 	}
-	float total_cost = 0;
-	for (int i = 0; i < P; i++) total_cost += dist[i];
+	int total_cost = 0;
+	for (int i = 0; i < N - 1; i++) total_cost += edge[i];
 	return total_cost;
-	// sort(dist, dist + P - 1);
-	//return dist[P - 1 - S];
 }
 
 int main()
 {
-	scanf("%d", &N);
-	while (N--)
-	{
-		scanf("%d %d", &S, &P);
-		for (int i = 0; i < P; i++)
+	while (scanf("%d", &N) != EOF & N != 0){
+		for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
 		{
-			scanf("%d %d", &pos[i].x, &pos[i].y);
+			scanf("%d", &dist[i][j]);
 		}
-		for (int i = 0; i < P; i++)
-		{
-			for (int j = i + 1; j < P; j++)
-			{
-				float a = float(pos[i].x - pos[j].x);
-				float b = float(pos[i].y - pos[j].y);
-				gra[i][j] = sqrtf(a*a + b*b);
-			}
-		}
-		printf("%.2f\n", Prime());
+		printf("%d\n", Prime());
 	}
 	return 0;
 }
