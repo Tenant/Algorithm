@@ -25,7 +25,7 @@ int getRoot(int idx){
 	return trueRoot;
 }
 
-int Dijkstra(){
+int Kruskal(){
 	sort(edges, edges + m, cmp);
 	int max_edge_cost = 0;	for (int idx = 1; idx <= n; idx++) root[idx] = -1;
 
