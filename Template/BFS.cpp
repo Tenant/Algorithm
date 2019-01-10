@@ -52,6 +52,7 @@ int BFS(){
 			if (visited[next_point.x][next_point.y][next_point.z]) continue;
 			if (maze[next_point.x][next_point.y][next_point.z] == '#') continue;
 			waitzone.push(next_point);
+			visited[next_point.x][next_point.y][next_point.z] = true;
 		}
 	}
 	return -1;
