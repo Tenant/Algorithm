@@ -54,3 +54,10 @@
 | 1384 | Piggy-Bank       | Knapsack Problem     | [Source](http://poj.org/problem?id=1384) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/1384.cpp) | Accepted |
 | 3260 | The Fewest Coins | 硬币找零, 背包问题   | [Source](http://poj.org/problem?id=3260) |                                                              |          |
 | 3624 | Charm Bracelet   | 0/1 Knapsack Problem | [Source](http://poj.org/problem?id=3624) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/3624.cpp) | Accepted |
+
+### OpenJudge
+
+| N.O. | Title    | Type               | Source                                               | Code                                                         | Status   |
+| ---- | -------- | ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| 4121 | 股票买卖 | 股票交易, 动态规划 | [Source](http://bailian.openjudge.cn/practice/4121/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/OpenJudge/4121.cpp) | Accepted |
+
