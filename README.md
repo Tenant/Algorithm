@@ -49,7 +49,8 @@
 | P1361 | 小M的作物 | 最小割, 网络流 | [Source](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.md) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.cpp) | [Accepted](https://www.luogu.org/problemnew/show/P1361) |
 
 ### POJ
-| N.O. | Title      | Type             | Source                                   | Code                                                         | Status   |
-| ---- | ---------- | ---------------- | ---------------------------------------- | ------------------------------------------------------------ | -------- |
-| 1384 | Piggy-Bank | Knapsack Problem | [Source](http://poj.org/problem?id=1384) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/P1384.cpp) | Accepted |
+| N.O. | Title          | Type                 | Source                                   | Code                                                         | Status   |
+| ---- | -------------- | -------------------- | ---------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1384 | Piggy-Bank     | Knapsack Problem     | [Source](http://poj.org/problem?id=1384) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/P1384.cpp) | Accepted |
+| 3624 | Charm Bracelet | 0/1 Knapsack Problem | [Source](http://poj.org/problem?id=3624) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/P3624.cpp) | Accepted |
 
