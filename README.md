@@ -49,16 +49,17 @@
 | P1361 | 小M的作物 | 最小割, 网络流 | [Source](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.md) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/Luogu/P1361.cpp) | [Accepted](https://www.luogu.org/problemnew/show/P1361) |
 
 ### POJ
-| N.O. | Title            | Type               | Source                                               | Code                                                         | Status   |
-| ---- | ---------------- | ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | -------- |
-| 1384 | Piggy-Bank       | 背包问题           | [Source](http://poj.org/problem?id=1384)             | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/1384.cpp) | Accepted |
-| 2766 | 最大子矩阵       | 最大子矩阵         | [Source](http://bailian.openjudge.cn/practice/2766/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/2766.cpp) | Accepted |
-| 3260 | The Fewest Coins | 硬币找零, 背包问题 | [Source](http://poj.org/problem?id=3260)             |                                                              |          |
-| 3624 | Charm Bracelet   | 0/1背包问题        | [Source](http://poj.org/problem?id=3624)             | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/3624.cpp) | Accepted |
+| N.O. | Title            | Type               | Source                                   | Code                                                         | Status   |
+| ---- | ---------------- | ------------------ | ---------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1384 | Piggy-Bank       | 背包问题           | [Source](http://poj.org/problem?id=1384) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/1384.cpp) | Accepted |
+| 3260 | The Fewest Coins | 硬币找零, 背包问题 | [Source](http://poj.org/problem?id=3260) |                                                              |          |
+| 3624 | Charm Bracelet   | 0/1背包问题        | [Source](http://poj.org/problem?id=3624) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/POJ/3624.cpp) | Accepted |
 
 ### OpenJudge
 
-| N.O. | Title    | Type               | Source                                               | Code                                                         | Status   |
-| ---- | -------- | ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | -------- |
-| 4121 | 股票买卖 | 股票交易, 动态规划 | [Source](http://bailian.openjudge.cn/practice/4121/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/OpenJudge/4121.cpp) | Accepted |
+| N.O. | Title            | Type               | Source                                               | Code                                                         | Status   |
+| ---- | ---------------- | ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1273 | Drainage Ditches | 最大流, 网络流     | [Source](http://bailian.openjudge.cn/practice/1273/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/OpenJudge/1273.cpp) | Accepted |
+| 2766 | 最大子矩阵       | 最大子矩阵         | [Source](http://bailian.openjudge.cn/practice/2766/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/OpenJudge/2766.cpp) | Accepted |
+| 4121 | 股票买卖         | 股票交易, 动态规划 | [Source](http://bailian.openjudge.cn/practice/4121/) | [Code](https://github.com/Tenant/Algorithm-Repo/blob/master/OpenJudge/4121.cpp) | Accepted |
 
